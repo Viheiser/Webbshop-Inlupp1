@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viktors Shop - Tack för din beställning</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body onLoad="renderThankYou()">
+    <header>
+      <div class="overlay">
+        <nav>
+          <div class="container header">
+            <h2 class="title">Viktor Shop</h2>
+            <ul>
+              <li><a href="index.html">Hem</a></li>
+              <li>
+                <a href="checkout.html">
+                  Varukorg
+                  <span>(0)</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <div id="orderDetails" class="checkout shadow-sm">
+        <div class="checkout-header text-center">
+          <span>Tack för din beställning!</span>
+        </div>
+        <div class="checkout-content shadow">
+          <ul id="orderedList" class="product-checkout-list"></ul>
+          <div id="totalPrice"></div>
+          <div class="text-center" id="customerInfo"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Viktor Shop - Varukorgen</title>
+  </head>
+  <body onLoad="renderCheckout()">
+    <header>
+      <div class="overlay">
+        <nav>
+          <div class="container header">
+            <ul class="pl-0">
+              <li><a href="index.html">&#8882; Fortsätt handla</a></li>
+            </ul>
+            <h2 class="title">Viktor Shop</h2>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <div id="cartCheckout" class="checkout shadow-sm">
+        <div class="checkout-header">
+          <span>Varukorg</span>
+          <button id="emptyCart" class="empty-button btn btn-danger">
+            Töm varukorgen
+          </button>
+        </div>
+        <div class="checkout-content shadow">
+          <ul id="checkoutList" class="product-checkout-list"></ul>
+          <div id="totalPrice"></div>
+          <form id="form" class="form-container shadow" action="thankyou.html">
+            <h2>Din Information</h2>
+            <div class="user-info-form">
+              <div class="row w-100">
+                <div class="col-lg-6">
+                  <label for="namn">Namn:</label>
+                  <input class="form-input" type="text" id="name" name="namn" />
+                  <p id="errorForName" hidden class="validation-text">
+                    Ogiltigt Namn (ex: John Doe)
+                  </p>
+                </div>
+                <div class="col-lg-6">
+                  <label for="phoneNumber">Telefon:</label>
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="phoneNumber"
+                    name="phoneNumber"
+                  />
+                  <p id="errorForPhoneNumber" hidden class="validation-text">
+                    Ogiltigt telefonnummer (ex: 0701234567)
+                  </p>
+                </div>
+                <div class="col-lg-6">
+                  <label for="email">E-post:</label>
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="email"
+                    name="email"
+                  />
+                  <p id="errorForEmail" hidden class="validation-text">
+                    Ogiltig E-post (ex: email@gmail.com)
+                  </p>
+                </div>
+                <div class="col-lg-6">
+                  <label for="address">Address:</label>
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="address"
+                    name="address"
+                  />
+                  <p id="errorForAddress" hidden class="validation-text">
+                    Ogiltig Leveransadress (ex: Hejvägen 11D)
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center complete-purchase mt-4">
+              <input
+                type="submit"
+                class="btn btn-success"
+                value="Slutför Köp"
+                id="completePurchase"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/validation.js"></script>
+  </body>
+</html>

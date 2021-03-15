@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Viktors Shop</title>
+  </head>
+  <body onLoad="renderIndex()">
+    <header>
+      <div class="overlay">
+        <nav>
+          <div class="container header">
+            <h2 class="title">Viktor Shop</h2>
+            <ul>
+              <li><a href="index.html">Hem</a></li>
+              <li>
+                <a href="checkout.html">
+                  Varukorg
+                  <span id="quantity">(0)</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <div
+        class="row d-flex justify-content-center text-center"
+        id="productContainer"
+      ></div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
