@@ -1,35 +1,3 @@
-async function renderIndex() {
-  let products = await getProductsFromAPI();
-  setInnerHTML(
-    createHTMLForIndexProducts(products),
-    document.getElementById("productContainer")
-  );
-
-  for (let btn of document.getElementsByClassName("add-to-cart")) {
-    btn.addEventListener("click", addToCartButtonEvent);
-  }
-
-  updateCartQuantityElement();
-}
-
-function renderCheckout() {
-  renderProductsForCheckout();
-
-  document.getElementById("emptyCart").addEventListener("click", () => {
-    let empty = [];
-    localStorage.setItem("cart", JSON.stringify(empty));
-
-    renderProductsForCheckout();
-  });
-}
-
-function renderThankYou() {
-  renderProductsForThankYou();
-  renderCustomerForThankYou();
-
-  emptyCart();
-}
-
 function renderCustomerForThankYou() {
   setInnerHTML(
     createHTMLForCustomer(),
